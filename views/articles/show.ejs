@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Blogg</title>
+</head>
+<body>
+    <div class='container'>
+        <h1 class ='mb-4'><%= articolo.titolo %></h1>
+        <div class='text-muted mb-2'><%= articolo.creatoIl.toLocaleDateString() %></div>
+        <a href='/' class='btn btn-secondary'>All Articles</a>
+        <a href='/articles/edit/<%=articolo.id%>' class='btn btn-info'>Edit</a>
+        <div>
+            <%- articolo.sanitizedHtml %>
+        </div>
+    </div>
+    
+</body>
+</html>
